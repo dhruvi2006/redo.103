@@ -22,6 +22,17 @@ dir_tree = {
 # Event Handler Class
 
 class FileMovementHandler(FileSystemEventHandler):
+    def on_created(self, event):
+        print(f"hey, {event.src_path} has been created!")   
+
+    def on_deleted():
+        print(f"opps! someone deleted {event.src_path}!")
+
+    def on_modified(): 
+        print(f"Hey your file{event.src_path} got modified!")
+
+    def on_moced():
+        print(f"This is to inform you that your file { even.srv_path} path has been changed")
 
     def on_created(self, event):
         print(event)    
